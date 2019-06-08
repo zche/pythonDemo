@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  py-helloworld:
+    build: .
+    image: py_helloworld
+    container_name: py_helloworld
+    restart: "no"
