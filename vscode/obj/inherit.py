@@ -1,4 +1,3 @@
-#coding=utf-8
 class Parent:
     parentAttr = 100
     def __init__(self):

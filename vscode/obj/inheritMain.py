@@ -1,3 +1,3 @@
-import inherit
-p1=inherit.Parent()
-
+from inherit import Parent,Child
+p1=Parent()
+p1.parentMethod()
