@@ -7,3 +7,5 @@ elif a==b:
     print("a==b")
 else:
     print("a<b")
+
+print('a>b 'if a>b else 'a<=b')
