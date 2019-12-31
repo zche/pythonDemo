@@ -1,0 +1,1 @@
+/Applications/anaconda3/lib/python3.7/site-packages/demo-0.1-py3.7.egg
