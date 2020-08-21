@@ -13,3 +13,8 @@ def func():
 #     print(i)
 left_lemmas = ['a','b','c']
 print(left_lemmas[-1:])
+
+for i in range(0,3):
+        print("开始迭代")
+        print(i)
+        print("一次迭代结束")

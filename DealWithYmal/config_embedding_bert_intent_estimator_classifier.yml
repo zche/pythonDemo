@@ -1,0 +1,19 @@
+language: zh
+pipeline:
+- dictionary_path: /usr/local/src/dictionary
+  name: tokenizer_jieba
+- ip: 192.168.1.75
+  name: bert_vectors_featurizer
+  port: 10555
+  port_out: 10556
+  show_server_config: true
+  timeout: 10000
+- intent_split_symbol: _
+  name: intent_estimator_classifier_tensorflow_embedding_bert
+- name: ner_synonyms
+- dimensions:
+  - phone-number
+  locale: zh_CN
+  name: ner_duckling_http
+  timezone: Asia/Shanghai
+  url: http://192.168.1.75:8000

@@ -1,7 +1,7 @@
 import os
 import tempfile
  
-temp = tempfile.NamedTemporaryFile()
+temp = tempfile.NamedTemporaryFile(delete=False)
 try:
     print('temp:'+str(temp))
     print('temp.name:'+temp.name)

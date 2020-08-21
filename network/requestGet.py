@@ -1,4 +1,5 @@
 import requests
 
-myparams={'q':'sldfks'}
-r=requests.get("https://www.so.com/s",myparams)
+myparams={'imageName':'test1_lala_1','imageVersion':'4.6'}
+r=requests.get("http://172.16.37.133/api/nlu/rasa/model/getbyimagenameandversion",myparams)
+print(r.ServerIP)

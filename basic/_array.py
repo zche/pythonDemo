@@ -5,10 +5,10 @@
 # arr1 = [['小米','电视','5'],['音箱'],['小米','全面屏','电视','E65A']]
 # print(list(iter(arr1))[0])
 
-str1 = '{潘婷,氨基酸,洗,护,套装,乳液,修护,洗发水,500,ml,搭配,3,分钟,奇迹,护发素,70,ml," ",新旧,包装,随机,发货,，,价格,￥,59.90,，,适合,头皮,：,干性,，,功效,：,水润,。}'
-str2 = '{B-baj,M-baj,M-baj,M-baj,M-baj,M-baj,M-baj,E-baj,B-rong,E-rong,O,B-baj,M-baj,M-baj,E-baj,B-rong,E-rong,O,O,O,O,O,O,O,B-price,E-price,O,O,O,O,O,O,O,O,O,O}'
-print(len(str1[1:-1].split(',')))
-print(len(str2[1:-1].split(',')))
+# str1 = '{潘婷,氨基酸,洗,护,套装,乳液,修护,洗发水,500,ml,搭配,3,分钟,奇迹,护发素,70,ml," ",新旧,包装,随机,发货,，,价格,￥,59.90,，,适合,头皮,：,干性,，,功效,：,水润,。}'
+# str2 = '{B-baj,M-baj,M-baj,M-baj,M-baj,M-baj,M-baj,E-baj,B-rong,E-rong,O,B-baj,M-baj,M-baj,E-baj,B-rong,E-rong,O,O,O,O,O,O,O,B-price,E-price,O,O,O,O,O,O,O,O,O,O}'
+# print(len(str1[1:-1].split(',')))
+# print(len(str2[1:-1].split(',')))
 # for item in arr1:
 #     print("{name}的长度为:{length}".format(name=item,length=len(item)))
 #     for i in item:
@@ -30,3 +30,7 @@ print(len(str2[1:-1].split(',')))
 # v1 = match_entitylist('小米1',arr1)
 # v2 = list(v1)
 # print(len(v2))
+
+corpus = [['你好坏','你真好'],['你好坏','你真好'],['你好坏','你真好'],['你好坏','你真好']]
+for a,b in corpus:
+    print(a,b)

@@ -8,6 +8,7 @@ num_ners = len(ner_tags)
 print(num_tokens)
 print(num_ners)
 # # find all first indexes of series of tokens tagged as ORG
+# 汉字
 first_indexes = (i for i in range(num_tokens) if "-Ni" in ner_tags[i] and (i == 0 or "-Ni" not in  ner_tags[i-1]) and re.match(u'^[\u4e00-\u9fa5\u3040-\u309f\u30a0-\u30ffa-zA-Z]+$', str(tokens[i])) != None)
 list_indexes = list(first_indexes)
 print(len(list_indexes))

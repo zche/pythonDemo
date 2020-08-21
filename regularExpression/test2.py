@@ -4,6 +4,7 @@ ner_tags = ['O','O','O','O','O','O','O','O','GPE','GPE','O','O','O','O','O','O',
 num_tokens = len(ner_tags)
 print(num_tokens)
 # # find all first indexes of series of tokens tagged as ORG
+# 汉字
 first_indexes = (i for i in range(num_tokens) if ner_tags[i] == "ORG" and (i == 0 or ner_tags[i-1] != "ORG") and re.match(u'^[\u4e00-\u9fa5\u3040-\u309f\u30a0-\u30ffa-zA-Z]+$', str(tokens[i])) != None)
 list_indexes = list(first_indexes)
 # print(list(first_indexes))

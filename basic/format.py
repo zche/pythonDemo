@@ -4,3 +4,5 @@ print("{1} {0} {1}".format("hello", "world"))
 
 a = "I'm %s. I'm %d year old" % ('Vamei', 99)
 print(a)
+
+print("{img}啦啦啦{img}".format(img="world"))
