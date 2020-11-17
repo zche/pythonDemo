@@ -10,6 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "pythonPath": "/Applications/anaconda3/bin/python3",
             "stopOnEntry": true
         }
     ]
