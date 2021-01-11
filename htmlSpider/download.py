@@ -1,27 +1,32 @@
 import os
 import urllib.request
 import ssl
+import multiprocessing
 
 ssl._create_default_https_context = ssl._create_unverified_context
 downloadPath ='/Users/zhaoruifei/Downloads/tmp/pictures/imgs'
-def downloadPic(url,imgName):
+def downloadPic(url):
     try:
+        index = url.rfind('/')
+        imgName = url[index+1:-2]
         urllib.request.urlretrieve(url, filename=downloadPath + '/'+ imgName)
     except Exception as e:
         print("Error occurred when downloading file, error message:")
         print(e)
 
 if __name__ == '__main__':
+    pool = multiprocessing.Pool(processes=4) # 创建4个进程
     with open(r'/Users/zhaoruifei/Downloads/tmp/pictures/urls.txt', 'r+', encoding='utf-8') as f_read:
         while True:
             line = f_read.readline()
             if not line:
                 break
             arr = line.replace('\'','').split(',')
-            flag = 1
+            # flag = 1
             for url in arr:
-                downloadPic(url,str(flag)+'.jpg')
-                flag = flag + 1
+                pool.apply_async(downloadPic, (url,))
+                # downloadPic(url,str(flag)+'.jpg')
+                # flag = flag + 1
             print('over')
             # url = re.findall(PATTERN,line)
             # if len(url) > 0:
