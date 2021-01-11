@@ -81,9 +81,9 @@ def process_multithread(client, appkey, token, number):
 if __name__ == "__main__":
     # 创建AcsClient实例
     client = AcsClient(
-    "LTAI4GKBS1ExNhnjqdh6pGhQ",
-    "JBraHsGCr6CHWevkHuhlU3jY65hcPV",
-    "cn-shanghai"
+    "test1",
+    "test2",
+    "cn"
     );
 
     # 创建request，并设置参数。
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     client = ali_speech.NlsClient()
     # 设置输出日志信息的级别：DEBUG、INFO、WARNING、ERROR
     client.set_log_level('INFO')
-    appkey = 'B58u85dnZs5cirr1'
+    appkey = 'test1'
     token = respJson['Token']['Id']
     process(client, appkey, token)
     print("end")
